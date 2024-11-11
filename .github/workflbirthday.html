@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DebarbitA's Birthday!</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background: linear-gradient(135deg, #ADD8E6, #FFFFFF);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Floating Confetti Effect */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #efce0d;
+      animation: fall linear infinite;
+      opacity: 0.7;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .question {
+      font-size: 24px;
+      margin-bottom: 30px;
+      animation: fadeIn 1s forwards;
+    }
+
+    .answer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .answer-buttons button {
+      font-size: 18px;
+      padding: 15px 40px;
+      background-color: #1E90FF;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .answer-buttons button:hover {
+      background-color: #4682B4;
+      transform: translateY(-5px);
+    }
+
+    .answer-buttons button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Birthday Message Styling */
+    .birthday-message {
+      background: #FFFAF0;
+      border: 2px solid #FF69B4;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s forwards;
+    }
+
+    .heartbeat {
+      font-size: 48px;
+      animation: heartbeat 1s infinite;
+    }
+
+    .response-message {
+      font-size: 30px;
+      color: #FF1493;
+      font-weight: bold;
+      text-transform: uppercase;
+      animation: fadeIn 1s forwards;
+    }
+
+    .celebration-message {
+      font-size: 22px;
+      color: #00008B;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .error-message {
+      font-size: 22px;
+      color: #050300;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50vh);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <h1></h1>
+    <p class="question" id="questionText">Are you ready for this?</p>
+    
+    <div class="answer-buttons">
+      <button id="yesButton" onclick="nextStep('yes')">Yes</button>
+      <button id="noButton" onclick="showError()">No</button>
+    </div>
+    
+    <div id="heartAnimation" class="hidden birthday-message">
+      <span class="heartbeat">❤️</span>
+      <p class="response-message">HAPPY BIRTHDAY, DEBARBITA! ALWAYS BE HAPPY AND SHINE LIKE THIS!</p>
+      <p class="celebration-message">Wishing you joy, love, and endless happiness on your special day! Keep smiling always!🎂✨</p>
+    </div>
+  </div>
+
+  <!-- Confetti Effect Elements -->
+  <div class="confetti" style="left: 20%; animation-duration: 3s; background-color: #FFD700;"></div>
+  <div class="confetti" style="left: 40%; animation-duration: 4s; background-color: #FF69B4;"></div>
+  <div class="confetti" style="left: 60%; animation-duration: 5s; background-color: #FFD700;"></div>
+  <div class="confetti" style="left: 80%; animation-duration: 3s; background-color: #FF69B4;"></div>
+
+  <script>
+    let step = 1;
+
+    function nextStep(answer) {
+      const questionText = document.getElementById("questionText");
+
+      if (answer === 'yes' && step === 1) {
+        questionText.innerHTML = "Are you excited for this?";
+        step++;
+      } else if (answer === 'yes' && step === 2) {
+        document.querySelector('.answer-buttons').style.display = "none";
+        questionText.style.display = "none";
+        document.getElementById("heartAnimation").classList.remove("hidden");
+      }
+    }
+
+    function showError() {
+      const container = document.getElementById("container");
+      container.innerHTML = `
+        <h1></h1>
+        <p class="error-message">You are a JHOGRUTI huh! Try again GANDU</p>
+        <div class="answer-buttons">
+          <button onclick="reset()">Retry</button>
+        </div>
+      `;
+    }
+
+    function reset() {
+      step = 1;
+      document.getElementById("container").innerHTML = `
+        <h1></h1>
+        <p class="question" id="questionText">Are you ready for this?</p>
+        <div class="answer-buttons">
+          <button onclick="nextStep('yes')">Yes</button>
+          <button onclick="showError()">No</button>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
