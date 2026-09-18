@@ -17,7 +17,6 @@ Currently focused on improving my **software development, problem-solving, DSA, 
 * ☕ Comfortable with **Java** and **C++**
 * 🗄️ Intermediate knowledge of **SQL**
 * 🤖 Interested in **AI & Machine Learning**
-* 🌐 Building **Full-Stack & API-based applications**
 * 🧠 Currently strengthening **DSA & problem solving**
 * 🔧 Learning through real-world projects and hands-on development
 * 💼 Open to **Software Development / AI-ML Internship opportunities**
@@ -107,7 +106,7 @@ A full-stack AI application focused on assisting with the early identification a
 
 ### AI Movie Discovery & Recommendation Platform
 
-A movie discovery web application designed to assist users in searching, exploring, and discovering movies through an interactive interface and API integration.
+A movie discovery web application designed to help users search, explore, and discover movies through an interactive interface and API integration.
 
 ### 🔨 Built With
 
@@ -174,7 +173,6 @@ Understand → Code → Debug → Improve → Repeat
 🌐 Full-Stack Development
 🔌 REST API Development
 🗄️ SQL & Database Design
-☕ Java Programming
 ```
 
 ---
@@ -191,47 +189,9 @@ Understand → Code → Debug → Improve → Repeat
 
 ---
 
-# 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=suvo-001&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=suvo-001&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
-</p>
-
----
-
-# 🐍 Contribution Activity
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake"/>
-</p>
-
----
-
-# 📈 What I'm Working Toward
-
-```text
-Software Development
-        ↓
-Strong Programming Fundamentals
-        ↓
-DSA + Problem Solving
-        ↓
-AI / Machine Learning
-        ↓
-Real-World Projects
-        ↓
-Production-Ready Applications
-        ↓
-Software Engineer
-```
-
----
-
 # 🌐 Connect With Me
 
 <p align="left">
-
 <a href="mailto:palsuvojit205@gmail.com">
 <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
@@ -239,7 +199,6 @@ Software Engineer
 <a href="https://www.linkedin.com/in/suvojit-pal-8ju122004/">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
-
 </p>
 
 ---
