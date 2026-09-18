@@ -102,24 +102,24 @@ A full-stack AI application focused on assisting with the early identification a
 
 ---
 
-## 🎬 CineMatch
+## ✍️ Handwritten Digit Recognition CNN
 
-### AI Movie Discovery & Recommendation Platform
+### AI-Based Handwritten Digit Classification
 
-A movie discovery web application designed to help users search, explore, and discover movies through an interactive interface and API integration.
+A machine learning project that uses a Convolutional Neural Network (CNN) to recognize and classify handwritten digits.
 
 ### 🔨 Built With
 
-`Python` `Flask` `JavaScript` `HTML` `CSS` `REST APIs`
+`Python` `TensorFlow` `Keras` `NumPy` `Matplotlib` `CNN`
 
 ### ✨ Features
 
-* 🔎 Movie search
-* 🎬 Movie discovery
-* ⭐ Popular movie section
-* 🎯 Recommendation functionality
-* 🌐 API integration
-* 📱 Responsive interface
+* 🔢 Handwritten digit recognition
+* 🧠 CNN-based image classification
+* 🖼️ Image preprocessing
+* 📊 Model training and evaluation
+* 📈 Accuracy analysis
+* 🧪 Test prediction on handwritten digits
 
 ---
 
